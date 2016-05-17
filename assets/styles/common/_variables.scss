@@ -5,5 +5,12 @@ $icon-font-path:        "../fonts/";
 $main-sm-columns:       12;
 $sidebar-sm-columns:    4;
 
+$font-family-sans-serif: "Biryani", Helvetica, Arial, sans-serif;
+$font-family-serif: "adobe-caslon-pro", "Times New Roman", Times, serif;
+$font-family-base: "adobe-caslon-pro", "Times New Roman", Times, serif;
+$headings-font-family: "Biryani", Helvetica, Arial, sans-serif;
+
 // Colors
-$brand-primary:         #27ae60;
+$brand-primary:         hsla(33, 93%, 54%, 1); //#f7951d
+$black:					hsla(330, 2%, 20%, 1);
+$white:					hsla(33,100%,100%,1);

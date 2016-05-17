@@ -22,6 +22,11 @@
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
+        setTimeout(function(){
+          console.log("removeClass('active');");
+           $('.banner').removeClass('active');
+         },5000);
+
       }
     },
     // Home page

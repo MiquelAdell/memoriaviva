@@ -1,1 +1,105 @@
+.full-width {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: initial;
+	padding: 0;
+}
 
+header {
+	position: fixed;
+	z-index: 1;
+}
+
+.banner {
+	.brand {
+		background-image: url(../images/header.png);
+		background-size: 75%;
+		background-color: $white;
+		background-repeat: no-repeat;
+		background-position: center center;
+		text-indent: -9999px;
+		width: 150px;
+		height: 150px;
+		display: block;
+		z-index: 2;
+		position: relative;
+		transition: width 0.5s ease, height 0.5s ease, margin-top 0.5s ease;
+	}
+
+	.nav-primary {
+		font-family: $headings-font-family;
+		position: relative;
+		margin-top: -15em;
+		z-index: 1;
+		width: 150px;
+		transition: width 0.5s ease, height 0.5s ease, margin-top 0.5s ease;
+
+		a {
+			font-size: 2rem;
+			background-color: transparentize($white, 0.1);
+			&:hover,
+			&:focus {
+			  background-color: transparentize($white, 0.01);
+			  color: $link-color;
+			}
+		}
+	}
+
+	.description {
+		div {
+			padding: 1em;
+			font-size: 2rem;
+		}
+		overflow: hidden;
+		position: relative;
+		z-index: 1;
+		width: 150px;
+		margin-top: -15em;
+		margin-bottom: 0;
+		background-color: transparentize($white, 0.1);
+		transition: width 0.5s ease, height 0.5s ease, margin-top 0.5s ease;
+	}
+
+
+
+	&:hover,
+	&.active {
+		.brand {
+			width: 250px;
+			height: 250px;
+		}
+		.nav-primary {
+			margin-top: 0em;
+			width: 250px;
+		}
+		.description {
+			margin-top: 0em;
+			width: 250px;
+		}
+	}
+}
+
+
+.home .page-header {
+	display: none;
+}
+
+/*
+ ___   ____  _      ___   _     _    _____  _   ___   _          __   _     _   ___   ____  ___
+| |_) | |_  \ \  / / / \ | |   | | |  | |  | | / / \ | |\ |     ( (` | |   | | | | \ | |_  | |_)
+|_| \ |_|__  \_\/  \_\_/ |_|__ \_\_/  |_|  |_| \_\_/ |_| \|     _)_) |_|__ |_| |_|_/ |_|__ |_| \
+*/
+.rev_slider div {
+	font-family: "adobe-caslon-pro", "Times New Roman", Times, serif !important;
+}
+
+.tparrows {
+	background: transparentize($white, 0.2);
+	&:hover {
+		background-color: transparentize($white, 0.1);
+	}
+}
+.tparrows:before {
+	color: $link-color;
+}
