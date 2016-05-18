@@ -1,4 +1,4 @@
-<header class="banner active">
+<header class="banner">
   <div class="container-fluid full-width">
 
     <a class="brand" href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>

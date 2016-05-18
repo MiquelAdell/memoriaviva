@@ -103,3 +103,23 @@ header {
 .tparrows:before {
 	color: $link-color;
 }
+
+/*
+ ___    __    __    ____  __
+| |_)  / /\  / /`_ | |_  ( (`
+|_|   /_/--\ \_\_/ |_|__ _)_)
+*/
+
+.content {
+	margin-left: 150px;
+	margin-right: 150px;
+	margin-top: 50px;
+	width: auto;
+	background: rgba(249, 208, 174, 0.34);
+	.home & {
+		margin-left: 0;
+		margin-right: 0;
+		margin-top: 0;
+		width: 100%;
+	}
+}

@@ -24,15 +24,15 @@
         // JavaScript to be fired on all pages, after page specific JS is fired
         setTimeout(function(){
           console.log("removeClass('active');");
-           $('.banner').removeClass('active');
-         },5000);
-
+          $('.banner').removeClass('active');
+        },5000);
       }
     },
     // Home page
     'home': {
       init: function() {
         // JavaScript to be fired on the home page
+        $('.banner').addClass('active');
       },
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS
