@@ -14,8 +14,13 @@ header {
 .banner {
 	.brand {
 		background-image: url(../images/header.png);
-		background-size: 75%;
 		background-color: $white;
+		&.alt {
+			background-image: url(../images/header-alt.png);
+			background-color: $brand-primary;
+		}
+
+		background-size: 75%;
 		background-repeat: no-repeat;
 		background-position: center center;
 		text-indent: -9999px;
