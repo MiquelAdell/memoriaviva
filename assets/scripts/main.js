@@ -12,6 +12,12 @@
 
 (function($) {
 
+  jQuery.fn.isLoaded = function() {
+      return this
+               .filter("img")
+               .filter(function() { return this.complete; }).length > 0;
+  };
+
   // Use this variable to set up the common and page specific functions. If you
   // rename this variable, you will also need to rename the namespace below.
   var Sage = {
@@ -33,6 +39,19 @@
       init: function() {
         // JavaScript to be fired on the home page
         $('.banner').addClass('active');
+        if($('.rev_slider.fullscreenbanner').size()){
+          $('body').append('<div class="preload"></div>');
+          setTimeout(function(){
+            var imgUrl = $('.rev_slider.fullscreenbanner li .defaultimg').first().attr("src");
+            if(imgUrl){
+              console.log("check if loaded",imgUrl);
+              $('<img />').load( function(){
+                $('.preload').remove();
+              }).attr('src', imgUrl);
+            }
+          },500);
+        }
+
       },
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS
