@@ -72,6 +72,8 @@ header {
 		overflow: hidden;
 		position: relative;
 		z-index: 2;
+		text-transform: uppercase;
+		font-weight: 600;
 
 		div {
 			padding: 1em;
@@ -105,7 +107,7 @@ header {
 | |_) | |_  \ \  / / / \ | |   | | |  | |  | | / / \ | |\ |     ( (` | |   | | | | \ | |_  | |_)
 |_| \ |_|__  \_\/  \_\_/ |_|__ \_\_/  |_|  |_| \_\_/ |_| \|     _)_) |_|__ |_| |_|_/ |_|__ |_| \
 */
-.rev_slider div {
+.rev_slider span {
 	font-family: "adobe-caslon-pro", "Times New Roman", Times, serif !important;
 }
 
