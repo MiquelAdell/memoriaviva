@@ -3,7 +3,7 @@
 
     <a class="brand <?=$_GET['extra']?>" href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
 
-    <div class="nav-holder">
+    <div class="nav-holder <?=$_GET['extra']?>">
       <h2 class="description"><div><?=get_bloginfo( "description")?></div></h2>
 
       <nav class="nav-primary">
