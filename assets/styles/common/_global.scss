@@ -1,3 +1,13 @@
+$break-small: 320px;
+$break-medium: 800px;
+$break-large: 1200px;
+
+.container-fluid {
+	@media screen and (max-width: $break-medium) {
+		padding-top: 150px;
+
+	}
+}
 .full-width {
 	width: 100%;
 	margin-left: auto;
@@ -23,6 +33,13 @@ header {
 	margin: 0;
 
 	.brand {
+		@media screen and (max-width: $break-medium) {
+			position: inherit;
+			top: 0;
+		}
+		@media screen and (min-width: $break-medium) {
+			position: relative;
+		}
 		// background-image: url(../images/header-alt.png);
 		// background-color: $brand-primary;
 
@@ -40,15 +57,29 @@ header {
 		height: 150px;
 		display: block;
 		z-index: 3;
-		position: relative;
 		transition: width 0.5s ease, height 0.5s ease, margin-top 0.5s ease;
 	}
 
-	&:hover,
-	&.active {
+	@media screen and (min-width: $break-medium) {
+		&:hover,
+		&.active {
+			.brand {
+				width: 250px;
+				height: 250px;
+
+				background-color: transparentize($black, 0.1);
+				.el-projecte & {
+					background-image: url(../images/header-alt-2.png);
+				}
+
+			}
+		}
+	}
+
+	@media screen and (max-width: $break-medium) {
 		.brand {
-			width: 250px;
-			height: 250px;
+			width: 150px;
+			height: 50px;
 
 			background-color: transparentize($black, 0.1);
 			.el-projecte & {
@@ -78,14 +109,39 @@ header {
 		}
 	}
 
-	&:hover,
-	&.active {
+	@media screen and (min-width: $break-medium) {
+		&:hover,
+		&.active {
+			.nav-holder {
+				width: 250px;
+				height: 250px;
+
+				& > * {
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	@media screen and (max-width: $break-medium) {
 		.nav-holder {
-			width: 250px;
-			height: 250px;
+			position: fixed;
+			top: 0;
+			left: 150px;
+			right: 50px;
+			width: 98%;
+			margin-top: 0;
+			height: 50px;
 
 			& > * {
 				opacity: 1;
+			}
+
+			.menu-principal {
+				li {
+					display: block;
+					float: left;
+				}
 			}
 		}
 	}
@@ -95,8 +151,18 @@ header {
 		position: relative;
 		z-index: 2;
 
+		@media screen and (max-width: $break-medium) {
+			li {
+				float: left;
+			}
+		}
+
 		a {
 			font-size: 2rem;
+			@media screen and (max-width: $break-medium) {
+				line-height: 4rem;
+			}
+
 			&:hover,
 			&:focus {
 			  background-color: transparentize($white, 0.01);
@@ -115,6 +181,10 @@ header {
 		font-weight: 600;
 
 		div {
+
+			@media screen and (max-width: $break-medium) {
+				display: none;
+			}
 			font-size: 1.8rem;
 			line-height: 1.5em;
 			width: 250px;
@@ -159,9 +229,11 @@ header {
 */
 
 .content {
-	margin-left: 150px;
-	margin-right: 150px;
-	margin-top: 50px;
+	@media screen and (min-width: $break-medium) {
+		margin-left: 150px;
+		margin-right: 150px;
+		margin-top: 50px;
+	}
 	width: auto;
 	.home & {
 		margin-left: 0;
